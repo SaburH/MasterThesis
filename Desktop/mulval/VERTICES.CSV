@@ -1,0 +1,119 @@
+1,"execCode('10.0.2.113',someuser)","OR",0
+2,"RULE 2 (remote exploit of a server program)","AND",0
+3,"netAccess('10.0.2.113',tcp,'25')","OR",0
+4,"RULE 5 (multi-hop access)","AND",0
+5,"hacl('10.0.2.113','10.0.2.113',tcp,'25')","LEAF",1
+6,"RULE 6 (direct network access)","AND",0
+7,"hacl(_,'10.0.2.113',tcp,'25')","LEAF",1
+8,"attackerLocated(_)","LEAF",1
+9,"RULE 7 (direct on-host access)","AND",0
+10,"attackerLocated('10.0.2.113')","LEAF",1
+11,"networkServiceInfo('10.0.2.113','pure-ftpd',tcp,'25',someuser)","LEAF",1
+12,"vulExists('10.0.2.113','CVE-2011-1575','pure-ftpd',remoteExploit,privEscalation)","LEAF",1
+13,"RULE 2 (remote exploit of a server program)","AND",0
+14,"networkServiceInfo('10.0.2.113',connect,tcp,'25',someuser)","LEAF",1
+15,"vulExists('10.0.2.113','CVE-2011-1506',connect,remoteExploit,privEscalation)","LEAF",1
+16,"RULE 2 (remote exploit of a server program)","AND",0
+17,"networkServiceInfo('10.0.2.113',cyrus_imap_server,tcp,'25',someuser)","LEAF",1
+18,"vulExists('10.0.2.113','CVE-2011-1926',cyrus_imap_server,remoteExploit,privEscalation)","LEAF",1
+19,"RULE 2 (remote exploit of a server program)","AND",0
+20,"networkServiceInfo('10.0.2.113',imail,tcp,'25',someuser)","LEAF",1
+21,"vulExists('10.0.2.113','CVE-2011-1430',imail,remoteExploit,privEscalation)","LEAF",1
+22,"RULE 2 (remote exploit of a server program)","AND",0
+23,"networkServiceInfo('10.0.2.113',netqmail,tcp,'25',someuser)","LEAF",1
+24,"vulExists('10.0.2.113','CVE-2011-1431',netqmail,remoteExploit,privEscalation)","LEAF",1
+25,"RULE 2 (remote exploit of a server program)","AND",0
+26,"networkServiceInfo('10.0.2.113',openssl,tcp,'25',someuser)","LEAF",1
+27,"vulExists('10.0.2.113','CVE-2014-0224',openssl,remoteExploit,privEscalation)","LEAF",1
+28,"RULE 2 (remote exploit of a server program)","AND",0
+29,"vulExists('10.0.2.113','CVE-2014-3566',openssl,remoteExploit,privEscalation)","LEAF",1
+30,"RULE 2 (remote exploit of a server program)","AND",0
+31,"vulExists('10.0.2.113','CVE-2016-0800',openssl,remoteExploit,privEscalation)","LEAF",1
+32,"RULE 2 (remote exploit of a server program)","AND",0
+33,"networkServiceInfo('10.0.2.113',postfix,tcp,'25',someuser)","LEAF",1
+34,"vulExists('10.0.2.113','CVE-2011-0411',postfix,remoteExploit,privEscalation)","LEAF",1
+35,"RULE 2 (remote exploit of a server program)","AND",0
+36,"networkServiceInfo('10.0.2.113',safari,tcp,'25',someuser)","LEAF",1
+37,"vulExists('10.0.2.113','CVE-2013-2566',safari,remoteExploit,privEscalation)","LEAF",1
+38,"RULE 2 (remote exploit of a server program)","AND",0
+39,"vulExists('10.0.2.113','CVE-2015-2808',safari,remoteExploit,privEscalation)","LEAF",1
+40,"RULE 2 (remote exploit of a server program)","AND",0
+41,"vulExists('10.0.2.113','CVE-2015-4000',safari,remoteExploit,privEscalation)","LEAF",1
+42,"RULE 2 (remote exploit of a server program)","AND",0
+43,"networkServiceInfo('10.0.2.113',scoofficeserver,tcp,'25',someuser)","LEAF",1
+44,"vulExists('10.0.2.113','CVE-2011-1432',scoofficeserver,remoteExploit,privEscalation)","LEAF",1
+45,"RULE 2 (remote exploit of a server program)","AND",0
+46,"networkServiceInfo('10.0.2.113',xcs,tcp,'25',someuser)","LEAF",1
+47,"vulExists('10.0.2.113','CVE-2011-2165',xcs,remoteExploit,privEscalation)","LEAF",1
+48,"RULE 2 (remote exploit of a server program)","AND",0
+49,"netAccess('10.0.2.113',tcp,'5432')","OR",0
+50,"RULE 5 (multi-hop access)","AND",0
+51,"hacl('10.0.2.113','10.0.2.113',tcp,'5432')","LEAF",1
+52,"RULE 6 (direct network access)","AND",0
+53,"hacl(_,'10.0.2.113',tcp,'5432')","LEAF",1
+54,"RULE 7 (direct on-host access)","AND",0
+55,"networkServiceInfo('10.0.2.113',openssl,tcp,'5432',someuser)","LEAF",1
+56,"RULE 2 (remote exploit of a server program)","AND",0
+57,"RULE 2 (remote exploit of a server program)","AND",0
+58,"RULE 2 (remote exploit of a server program)","AND",0
+59,"netAccess('10.0.2.113',tcp,'6667')","OR",0
+60,"RULE 5 (multi-hop access)","AND",0
+61,"hacl('10.0.2.113','10.0.2.113',tcp,'6667')","LEAF",1
+62,"RULE 6 (direct network access)","AND",0
+63,"hacl(_,'10.0.2.113',tcp,'6667')","LEAF",1
+64,"RULE 7 (direct on-host access)","AND",0
+65,"networkServiceInfo('10.0.2.113',unrealircd,tcp,'6667',someuser)","LEAF",1
+66,"vulExists('10.0.2.113','CVE-2010-2075',unrealircd,remoteExploit,privEscalation)","LEAF",1
+67,"RULE 2 (remote exploit of a server program)","AND",0
+68,"vulExists('10.0.2.113','CVE-2016-7144',unrealircd,remoteExploit,privEscalation)","LEAF",1
+69,"RULE 2 (remote exploit of a server program)","AND",0
+70,"netAccess('10.0.2.113',tcp,'80')","OR",0
+71,"RULE 5 (multi-hop access)","AND",0
+72,"hacl('10.0.2.113','10.0.2.113',tcp,'80')","LEAF",1
+73,"RULE 6 (direct network access)","AND",0
+74,"hacl(_,'10.0.2.113',tcp,'80')","LEAF",1
+75,"RULE 7 (direct on-host access)","AND",0
+76,"networkServiceInfo('10.0.2.113','tikiwiki_cms/groupware',tcp,'80',someuser)","LEAF",1
+77,"vulExists('10.0.2.113','CVE-2008-5318','tikiwiki_cms/groupware',remoteExploit,privEscalation)","LEAF",1
+78,"RULE 2 (remote exploit of a server program)","AND",0
+79,"vulExists('10.0.2.113','CVE-2008-5319','tikiwiki_cms/groupware',remoteExploit,privEscalation)","LEAF",1
+80,"RULE 2 (remote exploit of a server program)","AND",0
+81,"vulExists('10.0.2.113','CVE-2010-1133','tikiwiki_cms/groupware',remoteExploit,privEscalation)","LEAF",1
+82,"RULE 2 (remote exploit of a server program)","AND",0
+83,"vulExists('10.0.2.113','CVE-2010-1134','tikiwiki_cms/groupware',remoteExploit,privEscalation)","LEAF",1
+84,"RULE 2 (remote exploit of a server program)","AND",0
+85,"vulExists('10.0.2.113','CVE-2010-1135','tikiwiki_cms/groupware',remoteExploit,privEscalation)","LEAF",1
+86,"RULE 2 (remote exploit of a server program)","AND",0
+87,"vulExists('10.0.2.113','CVE-2010-1136','tikiwiki_cms/groupware',remoteExploit,privEscalation)","LEAF",1
+88,"RULE 2 (remote exploit of a server program)","AND",0
+89,"vulExists('10.0.2.113','CVE-2016-10143','tikiwiki_cms/groupware',remoteExploit,privEscalation)","LEAF",1
+90,"RULE 2 (remote exploit of a server program)","AND",0
+91,"networkServiceInfo('10.0.2.113',http_server,tcp,'80',someuser)","LEAF",1
+92,"vulExists('10.0.2.113','CVE-2012-0053',http_server,remoteExploit,privEscalation)","LEAF",1
+93,"RULE 2 (remote exploit of a server program)","AND",0
+94,"networkServiceInfo('10.0.2.113',internet_information_services,tcp,'80',someuser)","LEAF",1
+95,"vulExists('10.0.2.113','CVE-2003-1567',internet_information_services,remoteExploit,privEscalation)","LEAF",1
+96,"RULE 2 (remote exploit of a server program)","AND",0
+97,"networkServiceInfo('10.0.2.113',iplanet_web_server,tcp,'80',someuser)","LEAF",1
+98,"vulExists('10.0.2.113','CVE-2004-2763',iplanet_web_server,remoteExploit,privEscalation)","LEAF",1
+99,"RULE 2 (remote exploit of a server program)","AND",0
+100,"networkServiceInfo('10.0.2.113',java_system_application_server,tcp,'80',someuser)","LEAF",1
+101,"vulExists('10.0.2.113','CVE-2010-0386',java_system_application_server,remoteExploit,privEscalation)","LEAF",1
+102,"RULE 2 (remote exploit of a server program)","AND",0
+103,"networkServiceInfo('10.0.2.113',php,tcp,'80',someuser)","LEAF",1
+104,"vulExists('10.0.2.113','CVE-2012-1823',php,remoteExploit,privEscalation)","LEAF",1
+105,"RULE 2 (remote exploit of a server program)","AND",0
+106,"vulExists('10.0.2.113','CVE-2012-2311',php,remoteExploit,privEscalation)","LEAF",1
+107,"RULE 2 (remote exploit of a server program)","AND",0
+108,"vulExists('10.0.2.113','CVE-2012-2335',php,remoteExploit,privEscalation)","LEAF",1
+109,"RULE 2 (remote exploit of a server program)","AND",0
+110,"vulExists('10.0.2.113','CVE-2012-2336',php,remoteExploit,privEscalation)","LEAF",1
+111,"RULE 2 (remote exploit of a server program)","AND",0
+112,"networkServiceInfo('10.0.2.113',phpmyadmin,tcp,'80',someuser)","LEAF",1
+113,"vulExists('10.0.2.113','CVE-2010-4480',phpmyadmin,remoteExploit,privEscalation)","LEAF",1
+114,"RULE 2 (remote exploit of a server program)","AND",0
+115,"networkServiceInfo('10.0.2.113',solaris,tcp,'80',someuser)","LEAF",1
+116,"vulExists('10.0.2.113','CVE-2005-3398',solaris,remoteExploit,privEscalation)","LEAF",1
+117,"RULE 2 (remote exploit of a server program)","AND",0
+118,"networkServiceInfo('10.0.2.113',weblogic_server,tcp,'80',someuser)","LEAF",1
+119,"vulExists('10.0.2.113','CVE-2004-2320',weblogic_server,remoteExploit,privEscalation)","LEAF",1

@@ -1,0 +1,18 @@
+u1 >>  vethYACX5J >>b0101459-ee66-4855-9020-8c51536c5733
+
+u3 >>  vethHK90XT  vethQRIJWU >>866e5954-2c26-45c8-839d-4ea90066a1c7     6205654b-8a91-46d0-b8b7-83b24f0f51b7
+
+u2 >>  veth8KNTGT >>a9d4a2f8-0ce8-4f53-9fd8-04947678bafa
+
+
+
+sudo ovs-vsctl -- --id=@m create mirror name=mirror0 -- add bridge ovsbr1 mirrors @m output_port=3d60b3c2-1187-453c-82ba-51464040b8a2 select\_dst\_port=795c25c0-34ac-4cfb-88fc-eb5ce1075007
+
+
+sudo ovs-vsctl -- --id=@m create mirror name=mirror0 -- add bridge ovsbr1 mirrors @m 
+sudo ovs-vsctl set mirror mirror0 output_port=d11cc9f9-1287-464f-8454-68205e896fd7
+sudo ovs-vsctl set mirror mirror0 select\_dst\_port=c524609b-4830-4bc8-bbe7-4ddfbcc29b7c
+sudo ovs-vsctl set mirror mirror0 select_all=1
+
+
+
